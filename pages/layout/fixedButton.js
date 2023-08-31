@@ -12,7 +12,7 @@ export default function FixedButon() {
           </a>
         </li>
         <li>
-          <a href="tel:0988816215">
+          <a href="tel:0913228637">
             <img
               width={40}
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Circle-icons-phone.svg/1200px-Circle-icons-phone.svg.png"
@@ -21,7 +21,7 @@ export default function FixedButon() {
           </a>
         </li>
         <li>
-          <a href="http://zalo.me/0988816215" target="_blank">
+          <a href="http://zalo.me/0913228637" target="_blank">
             <img
               width={40}
               src="https://classic.vn/wp-content/uploads/2022/07/zalo-icon.png"

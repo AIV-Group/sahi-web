@@ -74,6 +74,7 @@ function MyApp({ Component, pageProps }) {
     <div id="page" className="page">
       <Head>
         <title>Kinh Đô</title>
+        <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -99,27 +100,28 @@ function MyApp({ Component, pageProps }) {
         ></script>
         <Script src="js/gtag.js"></Script>
       </Head>
-      {isLoarer ? (
+
+      {isLoarer && (
         <div className="onLoader">
           <div className="mt-5">
             <img src="./loader.svg" alt="loader" />
           </div>
         </div>
-      ) : (
-        <>
-          <FixedButon />
-          <Header logo={logo?.data?.attributes?.logo_light?.data?.attributes} />
-
-          <Component {...pageProps} />
-          {tintuc?.pathname !== "/tintuc" && tintuc?.route !== "/tintuc" && (
-            <Tintuc article={article} />
-          )}
-          <Footer
-            data={logo?.data?.attributes}
-            logo={logo?.data?.attributes?.logo_dark?.data?.attributes}
-          />
-        </>
       )}
+
+      <>
+        <FixedButon />
+        <Header logo={logo?.data?.attributes?.logo_light?.data?.attributes} />
+
+        <Component {...pageProps} />
+        {tintuc?.pathname !== "/tintuc" && tintuc?.route !== "/tintuc" && (
+          <Tintuc article={article} />
+        )}
+        <Footer
+          data={logo?.data?.attributes}
+          logo={logo?.data?.attributes?.logo_dark?.data?.attributes}
+        />
+      </>
 
       <Script
         strategy="beforeInteractive"
